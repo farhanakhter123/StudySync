@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'AzedoBold';
+    src: local('AzedoBold'),
+    url('./fonts/Azedo-Bold.otf') format('otf');
+}
+
+.sideBar-dashBoard{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul li:hover{
+    color: gray;
+}
+
+/* .sidebar {
+    background-color: red;
+    border-right: 1px solid red;
+    height: 100%;
+    overflow: auto;
+    padding: 16px 0;
+    width: 240px;
+   }
+   
+   .menu {
+    cursor: pointer;
+    margin-bottom: 16px;
+   }
+   
+   .logout {
+    cursor: pointer;
+    margin-top: 32px;
+   }
+   
+   section {
+    padding: 16px;
+    width: 100%;
+   } */

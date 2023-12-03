@@ -1,0 +1,54 @@
+/* .dash-side-container{
+    height: 100vh;
+    width: 100%;
+} */
+
+.upper-div{
+    height: 25%;
+    width: 100%;
+    padding: 0px 26px;
+    /* background-image: url("student.png");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-color: #dd1112; */
+    background-position-y: bottom 32px;
+    color: #cec8c6;
+    display: flex;
+    align-items: end;
+    /* justify-content: start; */
+    /* border: 2px solid red; */
+    font-size: 40px;
+    font-weight: bold;
+}
+#upper-div-id{
+    box-shadow:rgba(82, 82, 82, 0.95) 0px -100px 60px -20px inset;
+}
+.upper-div h1{
+    font-size: 50px;
+}
+.upper-div h2{
+    font-size: 80px;
+}
+
+.lower-div{
+    background-color: #2d2d2d;
+    color: #cec8c6;
+    padding: 20px 4px;
+    font-size: 18px;
+}
+
+.lower-div ul{
+    margin: 0px 44px;
+    margin-bottom: 10px;
+    padding: 8px 0px;
+    /* padding: 10px 10px; */
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lower-div ul li{
+    padding: 2px 10px;
+}

@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'AzedoBold';
+    src: local('AzedoBold'),
+         url('./fonts/Azedo-Bold.otf') format('otf');
+}

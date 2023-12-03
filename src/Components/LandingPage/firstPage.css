@@ -1,0 +1,118 @@
+.mainDiv {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2d2d2d;
+  color: #cec8c6;
+  background-image: url("student.png");
+  background-position: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* filter: drop-shadow(20px 20px 10px grey); */
+}
+
+.left-nav span {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.right-nav div {
+  font-size: 16px;
+  font-weight: 500;
+  color: #bbbbbb;
+}
+.right-nav div:hover {
+  color: #dd1112;
+}
+.right-nav ul li {
+  padding: 8px;
+  color: #bbbbbb;
+  border: 2px solid #bbbbbb;
+  border-radius: 100px;
+  font-size: 18px;
+}
+.right-nav ul li:hover {
+  border-color: #cec8c6;
+  color: #cec8c6;
+}
+.first-nav {
+  height: 70px;
+  padding: 0px 112px;
+}
+.first-nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.first-nav,
+.second-nav {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.second-nav {
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.second-nav ul {
+  padding: 0px 40px;
+}
+.second-nav ul li {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tilted-span {
+  width: 270px;
+  height: 100vh;
+  background-color: #dd1112;
+  color: #cec8c6;
+  position: absolute;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transform: skewX(-12deg);
+}
+
+.left-side {
+  position: absolute;
+  top: 40%;
+  left: 176px;
+  padding-right: 15rem;
+}
+
+.button-1,
+.button-2 {
+  padding: 12px 10px;
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button-1 {
+  border: 2px solid #dd1112;
+  background-color: #dd1112;
+  color: #cec8c6;
+}
+.button-1:hover {
+  border-color: #cec8c6;
+  background-color: transparent;
+}
+.button-2:hover {
+  border-color: #bbbbbb;
+  color: #bbbbbb;
+}
+.button-1:active,
+.button-2:active {
+  border-color: #6b6b6b;
+  color: #6b6b6b;
+}
