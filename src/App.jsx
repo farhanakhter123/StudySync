@@ -2,7 +2,7 @@ import "./App.css";
 import OpeningPage from "./Components/openingPage";
 import "./fonts/fonts.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import FirstPage from "./Components/landingPage/FirstPage";
+import FirstPage from "./Components/LandingPage/FirstPage";
 import ContactPage from "./Components/ContactPage/ContactPage";
 import SideBar from "./Components/DashBoard/SideBar";
 import DashBoard from "./Components/DashBoard/DashBoard";
@@ -13,6 +13,8 @@ import ThirdYear from "./Components/DashBoard/Year/Third/ThirdYear";
 import FourthYear from "./Components/DashBoard/Year/Fourth/FourthYear";
 import Micro from "./Components/DashBoard/Year/Third/Micro";
 import Network from "./Components/DashBoard/Year/Third/Network";
+// import StickyNotes from "./Components/DashBoard/StickyNotes";
+import MainCSE from "./Components/DashBoard/MainCSE";
 
 function App() {
   return (
@@ -22,24 +24,31 @@ function App() {
           <Route exact path="/" element={<OpeningPage />}></Route>
           <Route exact path="/home" element={<FirstPage />}></Route>
           <Route exact path="/contact" element={<ContactPage />}></Route>
+          {/* <Route exact path="/sticky" element={<StickyNotes />}></Route> */}
           <Route exact path="/dashboard" element={<SideBar />}>
             <Route path="/dashboard/" element={<DashBoard />}></Route>
             <Route path="/dashboard/cse" element={<Cse />}>
+              <Route path="/dashboard/cse/" element={<MainCSE/>}></Route>
               <Route
                 path="/dashboard/cse/1st"
-                element={<FirstYear year="1st" />}
+                element={<FirstYear/>}
               ></Route>
               <Route
                 path="/dashboard/cse/2nd"
-                element={<SecondYear year="2nd" />}
+                element={<SecondYear/>}
               ></Route>
               <Route
                 path="/dashboard/cse/3rd"
-                element={<ThirdYear year="3rd" />}
+                element={<ThirdYear />}
               >
-                <Route path="/dashboard/cse/3rd/micro" element={<Micro/>}></Route>
-                <Route path="/dashboard/cse/3rd/network" element={<Network/>}></Route>
-
+                <Route
+                  path="/dashboard/cse/3rd/micro"
+                  element={<Micro />}
+                ></Route>
+                <Route
+                  path="/dashboard/cse/3rd/network"
+                  element={<Network />}
+                ></Route>
               </Route>
               <Route
                 path="/dashboard/cse/4th"

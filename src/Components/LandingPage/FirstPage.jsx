@@ -10,12 +10,9 @@ import {
 import "./firstPage.css";
 import "animate.css";
 import { Link } from "react-router-dom";
+import Chatbot from "../DashBoard/Chatbot";
 
 function FirstPage() {
-  // const componentRef = useRef(null);
-  // const handleClick=()=>{
-  //   componentRef.current.scrollIntoView({ behavior: 'smooth' });
-  // }
   return (
     <>
       <div className="mainDiv relative flex flex-col items-center">
@@ -67,6 +64,9 @@ function FirstPage() {
                 Contact Us
               </Link>
             </li>
+            {/* <li>
+              <Link to="/sticky" >Sticky Notes</Link>
+            </li> */}
           </ul>
           <span className="tilted-span">
             <span className="skew-x-12">Unleash Your Potential</span>
@@ -86,17 +86,16 @@ function FirstPage() {
                 View Departments
               </button>
               <Link to="/dashboard/cse/3rd/network">
-              <button className="button-2 ml-4 transition-all ease-in delay-75">
-                Get Started
-                <BiRightArrowAlt className="ml-2" />
-              </button></Link>
+                <button className="button-2 ml-4 transition-all ease-in delay-75">
+                  Get Started
+                  <BiRightArrowAlt className="ml-2" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
+        <Chatbot/>
       </div>
-      {/* <div ref={componentRef} id="contact-page">
-      <ContactPage/>
-      </div> */}
     </>
   );
 }

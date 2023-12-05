@@ -65,7 +65,7 @@ function ContactPage() {
                 </a>
               </span>
               <span className="flex items-center">
-                <FaPhone className="icon-hover mr-4" /> +91 9934444004
+                <FaPhone className="icon-hover mr-4" /> +91 9934444022
               </span>
               <span>We are available 24 X 7 for helping</span>
             </div>
