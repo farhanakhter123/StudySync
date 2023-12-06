@@ -4,7 +4,7 @@ const DashBoard=()=>{
   return(
     <>
     <div className="dash-side-container">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae labore laudantium placeat iste quibusdam iusto quia, voluptatibus quis doloribus minus!
+      Work is in Progress we will finish it soon with some awsome themes
     </div>
     </>
   );

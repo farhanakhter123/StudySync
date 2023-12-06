@@ -1,20 +1,18 @@
 import "./App.css";
-import OpeningPage from "./Components/openingPage";
 import "./fonts/fonts.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import OpeningPage from "./Components/openingPage";
 import FirstPage from "./Components/LandingPage/FirstPage";
 import ContactPage from "./Components/ContactPage/ContactPage";
 import SideBar from "./Components/DashBoard/SideBar";
 import DashBoard from "./Components/DashBoard/DashBoard";
 import Cse from "./Components/DashBoard/Cse";
-import FirstYear from "./Components/DashBoard/Year/First/FirstYear";
-import SecondYear from "./Components/DashBoard/Year/Third/ThirdYear";
 import ThirdYear from "./Components/DashBoard/Year/Third/ThirdYear";
-import FourthYear from "./Components/DashBoard/Year/Fourth/FourthYear";
 import Micro from "./Components/DashBoard/Year/Third/Micro";
 import Network from "./Components/DashBoard/Year/Third/Network";
-// import StickyNotes from "./Components/DashBoard/StickyNotes";
-import MainCSE from "./Components/DashBoard/MainCSE";
+import Login from "./Components/Authentications/Login";
+import Signup from "./Components/Authentications/Signup";
+import Third_Intro from "./Components/DashBoard/Year/Third/Third_Intro";
 
 function App() {
   return (
@@ -22,25 +20,18 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<OpeningPage />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/signup" element={<Signup />}></Route>
           <Route exact path="/home" element={<FirstPage />}></Route>
           <Route exact path="/contact" element={<ContactPage />}></Route>
-          {/* <Route exact path="/sticky" element={<StickyNotes />}></Route> */}
           <Route exact path="/dashboard" element={<SideBar />}>
             <Route path="/dashboard/" element={<DashBoard />}></Route>
             <Route path="/dashboard/cse" element={<Cse />}>
-              <Route path="/dashboard/cse/" element={<MainCSE/>}></Route>
-              <Route
-                path="/dashboard/cse/1st"
-                element={<FirstYear/>}
-              ></Route>
-              <Route
-                path="/dashboard/cse/2nd"
-                element={<SecondYear/>}
-              ></Route>
-              <Route
-                path="/dashboard/cse/3rd"
-                element={<ThirdYear />}
-              >
+              <Route path="/dashboard/cse/3rd" element={<ThirdYear />}>
+                <Route
+                  path="/dashboard/cse/3rd/"
+                  element={<Third_Intro />}
+                ></Route>
                 <Route
                   path="/dashboard/cse/3rd/micro"
                   element={<Micro />}
@@ -50,10 +41,6 @@ function App() {
                   element={<Network />}
                 ></Route>
               </Route>
-              <Route
-                path="/dashboard/cse/4th"
-                element={<FourthYear year="4th" />}
-              ></Route>
             </Route>
           </Route>
         </Routes>

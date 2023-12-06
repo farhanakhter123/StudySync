@@ -7,11 +7,10 @@ import {
 } from "react-icons/bi";
 import { FaMailBulk, FaPhone } from "react-icons/fa";
 import { IoHome } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import InputField from "./InputField";
 import "./contactPage.css";
 import "animate.css";
-
-import { Link } from "react-router-dom";
 
 function ContactPage() {
   return (

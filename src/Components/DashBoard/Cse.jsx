@@ -32,7 +32,6 @@ const Cse = () => {
               <Link>4th</Link>
             </li>
           </ul>
-          <hr />
           <Outlet />
         </div>
       </div>

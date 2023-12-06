@@ -7,12 +7,26 @@ import {
   IoLogoLinkedin,
   IoLogoFacebook,
 } from "react-icons/io5";
+import { AiOutlineLogout } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
+import Chatbot from "../DashBoard/Chatbot";
 import "./firstPage.css";
 import "animate.css";
-import { Link } from "react-router-dom";
-import Chatbot from "../DashBoard/Chatbot";
 
 function FirstPage() {
+  const auth = getAuth();
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("SignOut successfully...");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log("error");
+      });
+  };
   return (
     <>
       <div className="mainDiv relative flex flex-col items-center">
@@ -23,13 +37,7 @@ function FirstPage() {
             </span>
           </div>
           <div className="right-nav flex items-center">
-            <div>
-              <button>LogIn</button>
-              <span> / </span>
-              <button>SignUp</button>
-            </div>
-
-            <ul className="ml-10 space-x-3">
+            <ul className="mr-10 space-x-3">
               <li>
                 <IoLogoTwitter />
               </li>
@@ -43,6 +51,11 @@ function FirstPage() {
                 <IoLogoFacebook />
               </li>
             </ul>
+            <div>
+              <button onClick={handleLogOut} className="flex">
+                <AiOutlineLogout className="text-[26px]" />
+              </button>
+            </div>
           </div>
         </nav>
         <nav className="second-nav animate__animated animate__fadeInLeft bg-white bg-opacity-20">
@@ -57,16 +70,13 @@ function FirstPage() {
               <Link to="">Idea</Link>
             </li>
             <li>
-              <Link to="/dashboard/cse/3rd/network">CSE</Link>
+              <Link to="/dashboard/cse/3rd/">CSE</Link>
             </li>
             <li>
               <Link to="/contact" rel="">
                 Contact Us
               </Link>
             </li>
-            {/* <li>
-              <Link to="/sticky" >Sticky Notes</Link>
-            </li> */}
           </ul>
           <span className="tilted-span">
             <span className="skew-x-12">Unleash Your Potential</span>
@@ -83,7 +93,7 @@ function FirstPage() {
             </p>
             <div className="animate__animated  animate__fadeInUp flex ">
               <button className="button-1 transition-all ease-in delay-75">
-                View Departments
+                Developers Hub
               </button>
               <Link to="/dashboard/cse/3rd/network">
                 <button className="button-2 ml-4 transition-all ease-in delay-75">
@@ -94,7 +104,7 @@ function FirstPage() {
             </div>
           </div>
         </div>
-        <Chatbot/>
+        <Chatbot />
       </div>
     </>
   );
